@@ -61,6 +61,13 @@ footer {
 
 @media screen and (max-width: 768px) {
     .card {
-        flex: 0 1 calc(50% - 20px);
+        flex: 0 1 calc(30% - 20px);
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
