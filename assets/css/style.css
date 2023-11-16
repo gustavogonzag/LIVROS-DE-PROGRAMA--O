@@ -71,7 +71,7 @@
     }
 }
 
-.btn{
+.btn-otimizar{
     padding: 5px 10px;
     background-color: #007BFF;
     color: white;
@@ -84,12 +84,12 @@
     align-items: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.39);
 }
-.btn img {
+.btn-otimizar img {
     width: 35px;
     padding-right: 5px;
 }
 
-.btn:hover{
+.btn-otimizar:hover{
     background-color: #006ce0;
     color: white;
     border: 1px solid white;

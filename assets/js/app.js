@@ -5,20 +5,28 @@ new Vue({
     optimized: false
   },
   methods: {
+    handleSetToken() {
+      const token = document.getElementById("token").value;
+      localStorage.setItem("token", token);
+      document.getElementById('close-modal').click();
+      setTimeout(() => {
+        this.handleClick();
+      },1000)
+    },
     handleClick() {
-    const textBtn = this.$refs.textBtn;
-    const btnOtimizar = this.$refs.btnOtimizar;
-    textBtn.innerHTML = "Otimizando...";
-    btnOtimizar.disabled = true;
-    btnOtimizar.classList.add('disabled');
-
-    // const token = localStorage.getItem("token");
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJjb2xvcmhhcm1vbnkiLCJzdWIiOiI2NTJhZmQzYjAwN2JmYjZhNWY1ZjlmZmYiLCJpYXQiOjE3MDAxMDU2MjAsImV4cCI6MTcwMDUzNzYyMH0.sFMKP9Fk5eZT95Zc_2juYQOPaxLn2E16_6zyNLZ6vFk";
+    const token = localStorage.getItem("token");
 
       if (!token) {
-        window.location.href = "https://color-harmony.vercel.app/";
+        document.getElementById('open-modal').click();
+        return;
       }
-    
+
+      const textBtn = this.$refs.textBtn;
+      const btnOtimizar = this.$refs.btnOtimizar;
+      textBtn.innerHTML = "Otimizando...";
+      btnOtimizar.disabled = true;
+      btnOtimizar.classList.add('disabled');
+
       this.$nextTick(async () => {
         const url = window.location.href;
         const obj = {
