@@ -1,0 +1,101 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.padrao header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.padrao .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.padrao footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.padrao .card {
+    flex: 0 1 calc(33.33% - 20px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.padrao .card:hover {
+    transform: scale(1.05);
+}
+
+.padrao .card img {
+    width: 200px;
+    height: auto;
+}
+
+.padrao .card .info {
+    flex: 1;
+    padding: 10px;
+}
+
+.padrao .card h2 {
+    text-align: center;
+}
+
+.padrao .card p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .padrao .card {
+        flex: 0 1 calc(30% - 20px);
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .padrao .container {
+        flex-direction: column;
+    }
+}
+
+.btn{
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.39);
+}
+.btn img {
+    width: 35px;
+    padding-right: 5px;
+}
+
+.btn:hover{
+    background-color: #006ce0;
+    color: white;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+.disabled{
+    cursor: not-allowed;
+}
