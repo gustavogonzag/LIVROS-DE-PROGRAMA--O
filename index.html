@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livros Programação</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        
+    </style>
 </head>
 
 <body class="padrao noturno daltonismo noturnoDaltonismo">
     <div id="app">
-        <header style="display: flex; justify-content: space-evenly;">
-            <div class="topo">
+        <header style="display: flex; justify-content: center; align-items: center; padding: 8px;">
+            <div class="topo" style="margin: 0 auto;">
                 <h1>Livros de Programação</h1>
             </div>
-            <button v-if="!optimized" ref="btnOtimizar" @click="handleClick" class="btn"> <img
-                src="./assets/img/otimizar.png" alt=""><span ref="textBtn">Otimizar
-                visual</span></button>
-        <button v-else @click="handleReturn" class="btn"> <img src="./assets/img/otimizar.png"
-                alt=""><span>Retornar</span></button>
+            <div style="align-self: flex-end;">
+                <button v-if="!optimized" ref="btnOtimizar" @click="handleClick" class="btn"> <img
+                    src="./assets/img/otimizar.png" alt=""><span ref="textBtn">Otimizar
+                    visual</span></button>
+            <button v-else @click="handleReturn" class="btn"> <img src="./assets/img/otimizar.png"
+                    alt=""><span>Retornar</span></button>
+            </div>
         </header>
         <div class="container">
             <div class="card">
